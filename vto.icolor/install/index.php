@@ -20,7 +20,28 @@ Class Vto_icolor extends CModule
     }
 }
 
+function DoInstall(){
 
+    global $APPLICATION;
 
+    if(true){
+
+    \Bitrix\Main\ModuleManager::registerModule($this->MODULE_ID);
+    
+            } else {
+        $APPLICATION->ThrowException(Loc::getMessage("VTO_ICOLOR_ERROR_INSTALL_VERSION"));
+    }
+}
+
+function DoUnInstall(){
+
+    if(true){
+
+    \Bitrix\Main\ModuleManager::unRegisterModule($this->MODULE_ID);
+
+            } /*else {
+        //$APPLICATION->ThrowException(Loc::getMessage("VTO_ICOLOR_ERROR_INSTALL_VERSION"));
+    }*/
+}
 
 ?>
