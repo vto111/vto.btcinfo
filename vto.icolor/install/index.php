@@ -27,13 +27,13 @@ function DoInstall(){
     if(true){
 
     \Bitrix\Main\ModuleManager::registerModule($this->MODULE_ID);
-    
+
             } else {
         $APPLICATION->ThrowException(Loc::getMessage("VTO_ICOLOR_ERROR_INSTALL_VERSION"));
     }
 }
 
-function DoUnInstall(){
+function DoUninstall(){
 
     if(true){
 
