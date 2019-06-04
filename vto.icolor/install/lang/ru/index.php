@@ -6,6 +6,10 @@ $MESS ['VTO_ICOLOR_PARTNER_URI'] = "1c-bitrix.pro";
 $MESS ['VTO_ICOLOR_ERROR_INSTALL_VERSION'] = "Error install";
 $MESS ['VTO_ICOLOR_ERROR_UNINSTALL_VERSION'] = "Error uninstall";
 $MESS ['VTO_ICOLOR_INSTALL_TITLE'] = "Title install";
-$MESS ['VTO_ICOLOR_UNINSTALL_TITLE'] = "Title uninstall";
+$MESS ['VTO_ICOLOR_UNINSTALL_TITLE'] = "Удаление модуля";
+$MESS ['MOD_UNIST_WARN'] = "Вы хотите удалить приложение vto.icolor";
+$MESS ['MOD_UNIST_SAVE'] = "Вы можете сохранить таблицы";
+$MESS ['MOD_UNIST_SAVE_TABLES'] = "Сохранить таблицы";
+$MESS ['MOD_UNIST_DEL'] = "Удалить";
 
 ?>

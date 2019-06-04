@@ -62,20 +62,21 @@ Class vto_icolor extends CModule
             $APPLICATION->IncludeAdminFile(Loc::getMessage("VTO_ICOLOR_UNINSTALL_TITLE"), $this->GetPath() . "/install/unstep1.php");
 
         } elseif ($request["step"] == 2) {
-            if ($request["savedata"] != "Y") {
+            //if ($request["savedata"] != "Y")
 
-            }
+
 
 
             \Bitrix\Main\ModuleManager::unRegisterModule($this->MODULE_ID);
 
-        } else {
-            $APPLICATION->ThrowException(Loc::getMessage("VTO_ICOLOR_ERROR_INSTALL_VERSION"));
+            $APPLICATION->IncludeAdminFile(Loc::getMessage("VTO_ICOLOR_UNINSTALL_TITLE"), $this->GetPath() . "/install/unstep2.php");
 
+            }
         }
 
-    }
 
 }
+
+
 
 ?>
