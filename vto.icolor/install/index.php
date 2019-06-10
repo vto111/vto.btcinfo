@@ -31,6 +31,30 @@ Class vto_icolor extends CModule
             return dirname(__DIR__);
     }
 
+    function InstallDB($install_wizard = true)
+    {
+        global $DB, $DBType, $APPLICATION;
+
+        /*RegisterModule("bitrix.siteinfoportal");
+        RegisterModuleDependences("main", "OnBeforeProlog", "bitrix.siteinfoportal", "CSiteInfoportal", "ShowPanel");*/
+
+        return true;
+    }
+
+    function UnInstallDB($arParams = Array())
+    {
+        global $DB, $DBType, $APPLICATION;
+
+        if(!array_key_exists("savedata", $arParams) || ($arParams["savedata"] != "Y")) {
+            return true;
+        }
+
+        /*UnRegisterModuleDependences("main", "OnBeforeProlog", "bitrix.siteinfoportal", "CSiteInfoportal", "ShowPanel");
+        UnRegisterModule("bitrix.siteinfoportal");*/
+
+        return true;
+    }
+
     function DoInstall()
     {
 
@@ -39,6 +63,7 @@ Class vto_icolor extends CModule
         if ($this->isVersionD7()) {
 
             \Bitrix\Main\ModuleManager::registerModule($this->MODULE_ID);
+            $this->InstallDB();
 
         } else {
             $APPLICATION->ThrowException(Loc::getMessage("VTO_ICOLOR_ERROR_INSTALL_VERSION"));
@@ -49,29 +74,34 @@ Class vto_icolor extends CModule
 
     }
 
+    /**
+     * @throws \Bitrix\Main\SystemException
+     */
     function DoUninstall()
     {
 
-        global $APPLICATION;
+        global $APPLICATION, $step;
 
-        $context = \Bitrix\Main\Application::getInstance()->getContext();
-        $request = $context->getRequest();
+        $step = IntVal($step);
 
-        if ($request["step"] < 2) {
+        if ($step < 2) {
+
 
             $APPLICATION->IncludeAdminFile(Loc::getMessage("VTO_ICOLOR_UNINSTALL_TITLE"), $this->GetPath() . "/install/unstep1.php");
 
-        } elseif ($request["step"] == 2) {
-            //if ($request["savedata"] != "Y")
 
+        } elseif ($step == 2) {
 
-
+            $this->UnInstallDB(array(
+                "savedata" => $_REQUEST["savedata"],
+            ));
 
             \Bitrix\Main\ModuleManager::unRegisterModule($this->MODULE_ID);
-
             $APPLICATION->IncludeAdminFile(Loc::getMessage("VTO_ICOLOR_UNINSTALL_TITLE"), $this->GetPath() . "/install/unstep2.php");
 
+
             }
+
         }
 
 

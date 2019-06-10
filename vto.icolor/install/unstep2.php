@@ -9,14 +9,14 @@
      echo CAdminMessage::ShowMessage(
          array(
              "TYPE" => "ERROR",
-             "MESSAGE" => Loc::getMessage("MOD_INST_ERR"),
+             "MESSAGE" => Loc::getMessage("MOD_UNINST_ERR"),
              "DETAILS" => $ex->GetString(),
              "HTML" => true,
          )
      );
 
  else
-     echo CAdminMessage::ShowNote(ShowMessage("MOD_INST_OK"));
+     echo CAdminMessage::ShowNote(Loc::getMessage("MOD_UNINST_OK"));
 
  ?>
 

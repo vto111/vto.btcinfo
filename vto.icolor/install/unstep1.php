@@ -11,6 +11,7 @@ Loc::loadMessages(__FILE__);
 
 <form action="<?echo $APPLICATION->GetCurPage()?>"
       <?=bitrix_sessid_post()?>
+      <?=bitrix_sessid_post()?>
         <input type="hidden" name="lang" value="<?echo LANGUAGE_ID?>">
         <input type="hidden" name="id" value="vto.icolor">
         <input type="hidden" name="uninstall" value="Y">

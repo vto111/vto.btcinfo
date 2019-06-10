@@ -16,7 +16,7 @@ if ($ex = $APPLICATION->GetException())
     );
 
 else
-    echo CAdminMessage::ShowNote(ShowMessage("MOD_INST_OK"));
+    echo CAdminMessage::ShowNote(Loc::getMessage("MOD_INST_OK"));
 
 ?>
 
