@@ -11,6 +11,9 @@ $MESS ['MOD_UNIST_WARN'] = "Вы хотите удалить приложени�
 $MESS ['MOD_UNIST_SAVE'] = "Вы можете сохранить таблицы";
 $MESS ['MOD_UNIST_SAVE_TABLES'] = "Сохранить таблицы";
 $MESS ['MOD_UNIST_DEL'] = "Удалить";
+$MESS ['VTO_ICOLOR_FIELD_TEXT_TITLE'] = "VTO_ICOLOR_FIELD_TEXT_TITLE";
+$MESS ['VTO_ICOLOR_FIELD_LINE_TITLE'] = "VTO_ICOLOR_FIELD_LINE_TITLE";
+$MESS ['VTO_ICOLOR_TAB_SETTINGS'] = "Настройки";
 //$MESS ['MOD_UNINST_ERR'] = "Ошибка удаления";
 //$MESS ['MOD_UNINST_OK'] = "Успешное удаление";
 
