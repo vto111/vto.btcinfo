@@ -12,6 +12,23 @@ Loc::loadMessages(__FILE__);
 
 $request = \Bitrix\Main\HttpApplication::getInstance()->getContext()->getRequest();
 
+// выберем все активные информационные блоки для текущего сайта типа catalog
+// у которых символьный код не my_products, со счетчиком активных элементов.
+$res = CIBlock::GetList(
+    Array(),
+    Array(
+        'TYPE'=>'catalog',
+        'SITE_ID'=>SITE_ID,
+        'ACTIVE'=>'Y',
+        "CNT_ACTIVE"=>"Y",
+        "!CODE"=>'my_products'
+    ), true
+);
+while($ar_res = $res->Fetch())
+{
+    echo $ar_res['NAME'].': '.$ar_res['ELEMENT_CNT'];
+}
+
 $arTabs = array(
     array(
         'DIV'=> 'edit1',
