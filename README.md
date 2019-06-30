@@ -1,1 +1,2 @@
-Bitrix modele for color text infoblock universal lists
+Bitrix module for color text infoblock universal lists. 
+Модуль битрикса для подсвечивания текста инфоблоков универсальных списков цветом, в зависимости от условий. Например просроченная дата.
