@@ -1,2 +1,11 @@
-Bitrix module for color text infoblock universal lists. <br>
+#Описание
+
 Модуль битрикса для подсвечивания текста инфоблоков универсальных списков цветом, в зависимости от условий. Например просроченная дата.
+>Bitrix module for color text infoblock universal lists. <br>
+
+
+#Вспомогательные команды:
+
+Способ монтирования папки с большей скоростью передачи данных на виртуалке.
+
+>mount -t vboxsf -o umask=0022,gid=600,uid=600 lbx /home/bitrix/www/
