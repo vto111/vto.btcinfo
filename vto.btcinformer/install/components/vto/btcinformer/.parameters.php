@@ -4,18 +4,18 @@
     "PARAMETERS" => array(
         "TEMPLATE_FOR_DESCRIPTION_BTC" => array(
             "PARENT" => "BASE",
-            "NAME" => "Строка описания до значения",
+            "NAME" => GetMessage("TEMPLATE_FOR_DESCRIPTION_BTC_NAME_BEFORE"), 
             "TYPE" => "STRING",
             "MULTIPLE" => "N",
-            "DEFAULT" => "1 Bitcoin = ",
+            "DEFAULT" => GetMessage("TEMPLATE_FOR_DESCRIPTION_BTC_NAME_BEFORE_DEFAULT"), 
             ),
         
         "TEMPLATE_FOR_DESCRIPTION_USD" => array(
             "PARENT" => "BASE",
-            "NAME" => "Строка описания после значения",
+            "NAME" => GetMessage("TEMPLATE_FOR_DESCRIPTION_BTC_NAME_AFTER"), 
             "TYPE" => "STRING",
             "MULTIPLE" => "N",
-            "DEFAULT" => "$",
+            "DEFAULT" => GetMessage("TEMPLATE_FOR_DESCRIPTION_BTC_NAME_AFTER_DEFAULT"), 
             ),
         ),
      
