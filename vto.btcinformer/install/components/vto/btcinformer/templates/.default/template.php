@@ -1,5 +1,8 @@
 <?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();?>
 
-<?=var_dump($arResult);?>
+<? echo $arResult["DESCRIPTION_BTC"];?>
 
-<?=GetMessage("VTO_CURSE_BTC")?><br />
+<? echo $arResult["USD"]["last"];?>
+
+<? echo $arResult["DESCRIPTION_USD"];?>
+
