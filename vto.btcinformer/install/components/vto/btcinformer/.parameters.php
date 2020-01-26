@@ -28,7 +28,6 @@
             "TYPE" => "LIST",
             "MULTIPLE" => "N",
             "VALUES" => $arSourceData, 
-            //"DEFAULT" => "0", 
             ),
         ),
      
