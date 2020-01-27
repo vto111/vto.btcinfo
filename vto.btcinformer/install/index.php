@@ -5,6 +5,7 @@ Loc::loadMessages(__FILE__);
 Class vto_btcinformer extends CModule
 {   
     const MODULE_ID = 'vto.btcinformer';
+    var $MODULE_ID = 'vto.btcinformer';
     
     function __construct()
     {
